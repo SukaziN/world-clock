@@ -20,6 +20,16 @@ function updateTime() {
   sydneyTimeElement.innerHTML = sydneyTime.format(
     "[<strong>]hh:mm:ss[</strong>] [<small>]A[</small>]"
   );
+  let bermudaElement = document.querySelector("#bermuda");
+  let bermudaDateElement = document.querySelector("#bermuda .date");
+  bermudaDateElement.innerHTML = moment()
+    .tz("Atlantic/Bermuda")
+    .format("MMMM Do YYYY");
+  let bermudaTimeElement = bermudaElement.querySelector(".time");
+  let bermudaTime = moment().tz("Atlantic/Bermuda");
+  bermudaTimeElement.innerHTML = bermudaTime.format(
+    "[<strong>]hh:mm:ss[</strong>] [<small>]A[</small>]"
+  );
 }
 
 document.addEventListener("DOMContentLoaded", function () {
