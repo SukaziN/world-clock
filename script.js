@@ -42,8 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
       "A"
     )}</small></strong>
         </div>
-      </div>`;
+      </div>
+      <a href="/">Back to all cities</a>`;
   }
+
   citiesSelectElement.addEventListener("change", updateCity);
 });
 
